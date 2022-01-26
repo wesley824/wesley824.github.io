@@ -12,8 +12,10 @@
     --fw-bold: 900;
 
     --clr-light: #fff;
-    --clr-dark: #303039;
-    --clr-accent: #16e9bd;
+    --clr-dark: #36454f;
+    --clr-accent: #26cce9;
+    --clr-accent2: #16e9bd;
+    --clr-dark2: #303039;
 
     --fs-1: 3rem;
     --fs-h2: 2.2rem;
@@ -78,10 +80,36 @@ strong {font-weight: var(--fw-bold) }
     letter-spacing: 2px;    
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
+    border-radius: 5px;
 }
 
 .btn:hover {
     transform: scale(1.1);
+}
+
+
+/* Scroll Back to Top Button */
+.top_button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    color: var(--clr-light);
+    background: var(--clr-accent);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--bs);
+}
+
+.top_button_img {
+    width: 20px;
+    height: 20px;
+}
+
+.top_button:hover {
+    transform: scale(1.1);
+    transition: transform 200ms ease-in-out;
 }
 
 /* Typography */
@@ -134,7 +162,7 @@ header {
 }
 
 .logo { 
-    max-width: 100px;
+    max-width: 75px;
 }
 
 .nav {
@@ -146,6 +174,8 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
+    height: 100%;
+    opacity: 98.5%;
 
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -171,6 +201,8 @@ header {
 
 .nav_link:hover {
     color: var(--clr-accent);
+    transform: scale(1.1);
+    transition: transform 200ms ease-in-out;
 }
 
 .nav_toggle {
@@ -192,7 +224,7 @@ header {
 }
 
 .nav_open .hamburger {
-    transform: rotate(0.625turn);
+    transform: rotate(-0.625turn);
 }
 
 .nav_open .hamburger::before {
@@ -272,6 +304,17 @@ header {
 
 }
 
+
+/* Skills */
+
+
+.skills {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+
+
 /* My Projects */
 
 .projects {
@@ -280,12 +323,11 @@ header {
 
 .my_projects {
     background: var(--clr-dark);
-    background-image: url(images/background-image.jpg);
     background-size: cover;
     background-blend-mode: multiply;
     color: var(--clr-light);
     text-align: center;
-
+    filter: none;
 }
 
 .section_title__projects {
@@ -310,6 +352,7 @@ header {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+        grid-gap: 50px;
     }
 
     .service + .service {
@@ -398,6 +441,11 @@ margin: 0 auto;
 
 .contact_info__item {
     margin: 0 .5em;
+}
+
+.contact_info__item:hover {
+    transform: scale(1.2);
+    transition: transform 200ms ease-in-out;
 }
 
 .contact_info__link {
