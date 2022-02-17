@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff--primary: 'Press Start 2P', cursive;
+
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #36454f;
+    --clr-accent: #26cce9;
+    --clr-accent2: #16e9bd;
+    --clr-dark2: #303039;
+
+    --fs-1: 3rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+body {
+    background-color: black;
+}
+
+.score {
+    position: fixed;
+    z-index: 100;
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    user-select: none;
+    font-family: var(--ff--primary);
+}
+
+.start {
+    position: fixed;
+    inset: 0;
+    padding: 10px;
+    
+    background-color: white;
+    font-family: var(--ff--primary);
+    z-index: 100;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    height: 12em;
+    border-radius: 10px;
+}
+
+.scoreNumber {
+    padding: 5px;
+}
+
+.points {
+    padding: 5px;
+    padding-bottom: 20px;
+}
+
+button {
+    background-color: var(--clr-accent);
+    border: none;
+    padding: 20px 80px 20px 80px;
+    border-radius: 10px;
+    font-family: var(--ff--primary);
+}
