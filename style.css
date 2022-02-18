@@ -306,12 +306,40 @@ header {
 
 
 /* Skills */
-
-
-.skills {
+.skills_all {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
+    padding-top: 50px;
 }
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 100px;
+    flex-direction: row;
+}
+
+.skill {
+    width: 175px;
+    min-width: 100px;
+}
+
+.section_title__skills {
+    color: var(--clr-accent);
+    position: relative;
+    font-size: var(--fs-1);
+    text-align: center;
+}
+
+.section_title__skills::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;   
+}
+
 
 
 
@@ -349,7 +377,7 @@ header {
 @media (min-width: 800px) {
     .projects {
         display: flex;
-        max-width: 1000px;
+        max-width: 1500px;
         margin-left: auto;
         margin-right: auto;
         grid-gap: 50px;
@@ -361,11 +389,17 @@ header {
 
 }
 
-.shooterGame {
-    max-width: 350px;
-    max-height: 350px;
+.projectSc {
     margin-top: 1em;
+    width: 1500px;
+    height: 250px;
 }
+
+.projectSc:hover {
+    transform: scale(1.5);
+    transition: transform 200ms ease-in-out;
+}
+
 
 /* About me */
 
