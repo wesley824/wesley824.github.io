@@ -1,4 +1,4 @@
-// Navigation Button
+/* NAVIGATION */
 const navToggle = document.querySelector('.nav_toggle');
 const navLinks = document.querySelectorAll('.nav_link')
 
@@ -13,10 +13,9 @@ navLinks.forEach(Link => {
 })
 
 
-// Get the button:
+/* SCROLL TO TOP BUTTON */
 const topButton = document.getElementById("top_button");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -27,8 +26,23 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+/* LOADER */
+const load = document.querySelector('.load');
+const main = document.querySelector('.main');
+
+function init() {
+  setTimeout(() => {
+    load.style.opacity = 0;
+    load.style.display = 'none';
+
+    main.style.display = 'block';
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 3000);
+}
+
+init();
